@@ -47,17 +47,15 @@ void PrintArray(int[,] numbers)
 }
 void FindAvgColumns(int[,] numbers)
 {
-    
-    for (int i = 0; i < rows; i++)
+    for (int j = 0; j < columns; j++)
     {
         double sum = 0;
         double avg = 0;
-        for (int j = 0; j < columns; j++)
-            {
-            sum += numbers[j, i];
-            avg = Math.Round((sum / columns),2);
-            }
-        Console.WriteLine("Среднее арифметическое столбцов массива = " + avg);
+        for (int i = 0; i < rows; i++)
+        {
+            sum += numbers[i, j];
+            avg = Math.Round((sum / columns), 2);
+        }
+        Console.WriteLine("Среднее арифметическое столбцов = " + avg);
     }
-     
 }
